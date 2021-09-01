@@ -25,17 +25,10 @@ function shadeDarker() {
 }
 
 function resetGrid() {
-    gridLength = parseInt(window.prompt("Enter desired length of grid (1-100)"));
-    if (gridLength < 1 || gridLength > 100 || isNaN(gridLength)) {
-        window.alert("Grid not reset; enter a valid input to change the canvas.");
-    }
-    else {
-        numGrids = Math.pow(gridLength, 2);
-        deleteCurrentGrid();
-        createGrid();
-        gridChildren = document.querySelectorAll("#grid-container > div");
-        addShadeFeature();
-    }
+    deleteCurrentGrid();
+    createGrid();
+    gridChildren = document.querySelectorAll("#grid-container > div");
+    addShadeFeature();
 }
 
 function deleteCurrentGrid() {
@@ -43,9 +36,19 @@ function deleteCurrentGrid() {
         node.remove();
     })
 }
-
+//Creates default grid
 createGrid();
 let gridChildren = document.querySelectorAll("#grid-container > div");
 addShadeFeature();
+//Allows for other dimensions to be implemented
+let dimensionSlider = document.getElementById("dimension");
+let dimensionDisplay = document.querySelector("#dimension-display");
+dimensionSlider.oninput = () => {
+    gridLength = dimensionSlider.value;
+    dimensionDisplay.textContent = `${gridLength} x ${gridLength}`;
+    numGrids = Math.pow(gridLength, 2);
+    resetGrid();
+};
+//Resets the current grid
 let resetButton = document.querySelector("#reset-button");
 resetButton.addEventListener("click", resetGrid);

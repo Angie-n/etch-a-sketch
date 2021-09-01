@@ -8,8 +8,16 @@
     </head>
     <body>
         <h1>Etch-a-Sketch</h1>
-        <p> A simple way to make your pixel art come to life</p>
-        <button id="reset-button">Reset Canvas</button>
-        <div id="grid-container"></div>
+        <div id="main-content">
+            <div id="grid-container"></div>
+            <div id="grid-features">
+                <div id="dimensions-slider">
+                    <label for="dimension">Dimensions</label>
+                    <input type="range" id="dimension" name="dimension" min="1" max="100" value="16">
+                    <label for="dimension" id="dimension-display">16 x 16</label>
+                </div>
+                <button id="reset-button">Reset Canvas</button>
+            </div>
+        </div>
     </body>
 </html>

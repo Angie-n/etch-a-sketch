@@ -1,7 +1,10 @@
 body {
     margin: auto;
+    padding: 0px;
     text-align: center;
     font-family: Optima, sans-serif;
+    background-color: rgb(226, 15, 15);
+    color: white;
 }
 
 h1 {
@@ -10,26 +13,32 @@ h1 {
     font-family: Luminari, cursive;
 }
 
-p {
-    margin: 0;
-    font-size: 20px;
+#main-content {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 #grid-container {
     display: grid;
-    margin: auto;
-    width: 55vw;
-    height: 55vw;
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border: inset rgb(194, 187, 187) 8px;
 }
 #grid-container > div{
     border: solid rgb(218, 219, 223) 0.1px;
 }
+
+#grid-features {
+    display: flex;
+    flex-direction: column;
+}
+
 #reset-button {
     display: block;
     margin: 10px auto 10px auto;
-    padding: 1vh;
     border-radius: 7%;
-    width: 30%;
+    width: 150px;
     font-size: 100%;
     font-family: Optima, sans-serif;
 }
