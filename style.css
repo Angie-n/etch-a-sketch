@@ -1,9 +1,35 @@
+body {
+    margin: auto;
+    text-align: center;
+    font-family: Optima, sans-serif;
+}
+
+h1 {
+    margin: 0;
+    font-size: 50px;
+    font-family: Luminari, cursive;
+}
+
+p {
+    margin: 0;
+    font-size: 20px;
+}
+
 #grid-container {
     display: grid;
     margin: auto;
-    width: 65vw;
-    height: 65vw;
+    width: 55vw;
+    height: 55vw;
 }
 #grid-container > div{
     border: solid rgb(218, 219, 223) 0.1px;
+}
+#reset-button {
+    display: block;
+    margin: 10px auto 10px auto;
+    padding: 1vh;
+    border-radius: 7%;
+    width: 30%;
+    font-size: 100%;
+    font-family: Optima, sans-serif;
 }
