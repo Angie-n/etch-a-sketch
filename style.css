@@ -1,0 +1,9 @@
+#grid-container {
+    display: grid;
+    margin: auto;
+    width: 65vw;
+    height: 65vw;
+}
+#grid-container > div{
+    border: solid rgb(218, 202, 202) 0.1px;
+}
