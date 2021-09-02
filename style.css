@@ -15,11 +15,12 @@ h1 {
 
 #main-content {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 #grid-container {
     display: grid;
+    margin-right: 20px;
     width: 400px;
     height: 400px;
     background-color: white;
@@ -32,13 +33,33 @@ h1 {
 #grid-features {
     display: flex;
     flex-direction: column;
+    margin-left: 20px;
 }
 
-#reset-button {
+#dimension-slider {
+    display: flex;
+    flex-direction: column;
+}
+
+#dimension-header {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+button {
     display: block;
     margin: 10px auto 10px auto;
-    border-radius: 7%;
+    border-radius: 10%;
     width: 150px;
     font-size: 100%;
     font-family: Optima, sans-serif;
+    color: rgb(141, 0, 0);
+    background-color: white;
+    border: solid rgb(141, 0, 0) 2px;
+}
+
+button.isSelected {
+    color: white;
+    background-color: rgb(141, 0, 0);
+    border: double white 5px;
 }
