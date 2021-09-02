@@ -7,7 +7,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <h1>Etch-a-Sketch</h1>
+        <div id="header-container">
+            <div class="knob"></div>
+            <h1>Etch-a-Sketch</h1>
+            <div class="knob"></div>
+        </div>
         <div id="main-content">
             <div id="grid-container"></div>
             <div id="grid-features">
@@ -16,10 +20,14 @@
                     <input type="range" id="dimension-input" name="dimension-input" min="1" max="100" value="16">
                     <label for="dimension-input" id="dimension-display">16 x 16</label>
                 </div>
-                <button id="shading-button" class="isSelected">Shading</button>
-                <button id="solid-button">Solid</button>
-                <button id="black-button" class="isSelected">Black</button>
-                <button id="rainbow-button">Rainbow</button>
+                <div class="grouped-buttons">
+                    <button id="shading-button" class="isSelected">Shading</button>
+                    <button id="solid-button">Solid</button>
+                </div>
+                <div class="grouped-buttons">
+                    <button id="black-button" class="isSelected">Black</button>
+                    <button id="rainbow-button">Rainbow</button>
+                </div>
                 <button id="reset-button">Reset Canvas</button>
             </div>
         </div>
